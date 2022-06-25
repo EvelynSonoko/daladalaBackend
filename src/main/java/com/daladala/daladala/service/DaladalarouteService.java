@@ -22,5 +22,5 @@ public class DaladalarouteService {
     public List<Daladalaroute> getAll(){return daladalarouteRepository.findAll();}
     public Daladalaroute getById(Integer id){return daladalarouteRepository.findById(id).get();}
     public void updateDaladalaroute(Daladalaroute daladalaroute){daladalarouteRepository.save(daladalaroute);}
-    public void Delete(Integer id){daladalarouteRepository.deleteById(id);}
+    public void Delete(int id){daladalarouteRepository.deleteById(id);}
 }

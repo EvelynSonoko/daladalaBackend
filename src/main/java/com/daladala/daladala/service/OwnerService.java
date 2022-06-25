@@ -13,13 +13,13 @@ import java.util.List;
 public class OwnerService {
     private final UserService userService;
     private final OwnerRepository ownerRepository;
-    public void addOwner(Owner owner){
+    public Owner addOwner(Owner owner){
         User user = new User();
         user.setEmail(owner.getEmail());
         user.setPassword(owner.getEmail());
         user.setUsertype("Customer");
         userService.addUser(user);
-        ownerRepository.save(owner);
+       return ownerRepository.save(owner);
     }
     public List<Owner> getAll(){
       return ownerRepository.findAll();

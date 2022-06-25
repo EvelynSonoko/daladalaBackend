@@ -16,9 +16,11 @@ public class UserService {
     }
     public List<User> getAll(){return userRepository.findAll();}
     public User getById(String email){ return userRepository.findById(email).get(); }
-    public void UpdateUser(User user){ userRepository.save(user); }
+    public void UpdateUser(User user){
+        user.setUsertype("Customer");
+        userRepository.save(user); }
     public void Delete(String email){userRepository.deleteById(email);}
-    public User getByUser(String email){
-        return userRepository.getByUser(email);
+    public User getByUser(String email,String password){
+        return userRepository.getByUser(email,password);
     }
 }

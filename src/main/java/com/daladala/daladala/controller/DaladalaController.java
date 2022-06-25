@@ -20,7 +20,7 @@ public class DaladalaController {
     public void add(@RequestBody Daladala daladala){daladalaService.addDaladaladala(daladala);}
     @RequestMapping(path="get/{id}",method = RequestMethod.GET)
     public Daladala getById(@PathVariable String id){return daladalaService.getById(id);}
-    @RequestMapping(path="delete/id",method = {RequestMethod.DELETE,RequestMethod.GET})
+    @RequestMapping(path="delete/{id}",method = {RequestMethod.DELETE,RequestMethod.GET})
     public void Delete(@PathVariable("id")String id){daladalaService.Delete(id);}
     @RequestMapping(path = "put",method = RequestMethod.PUT)
     public void update(@RequestBody Daladala daladala){daladalaService.updateDaladala(daladala);}

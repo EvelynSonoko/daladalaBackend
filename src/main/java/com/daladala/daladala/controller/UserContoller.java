@@ -22,8 +22,8 @@ public class UserContoller {
     public void Delete(@PathVariable("email") String email){userService.Delete(email);}
     @RequestMapping(path = "put",method = RequestMethod.PUT)
     public void update(@RequestBody User user){userService.UpdateUser(user);}
-    @RequestMapping(path="login/{email}",method = RequestMethod.GET)
-    public User getByUser(@PathVariable("email") String email){
-        return userService.getByUser(email);
+    @RequestMapping(path="login/email/{email}/pass/{password}",method = RequestMethod.GET)
+    public User getByUser(@PathVariable("email") String email,@PathVariable("password") String password){
+        return userService.getByUser(email,password);
     }
 }

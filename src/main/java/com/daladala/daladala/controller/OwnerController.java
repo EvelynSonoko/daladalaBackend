@@ -17,7 +17,7 @@ public class OwnerController {
         return ownerService.getAll();
     }
     @RequestMapping(path= "post",method = RequestMethod.POST)
-    public void add(@RequestBody Owner owner){ ownerService.addOwner(owner); }
+    public Owner add(@RequestBody Owner owner){ return ownerService.addOwner(owner); }
     @RequestMapping(path="get/{id}",method = RequestMethod.GET)
     public Owner getById(@PathVariable String id){
         return ownerService.getById(id);

@@ -19,4 +19,5 @@ public class Daladalaroute {
     private Boolean status;
     private int route_id;
     private String daladala_id;
+
 }

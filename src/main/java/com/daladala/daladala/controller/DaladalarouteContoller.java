@@ -23,7 +23,7 @@ public class DaladalarouteContoller {
         }
     @RequestMapping(path = "get/{id}",method = RequestMethod.GET)
     public Daladalaroute getById(@PathVariable Integer id){return daladalarouteService.getById(id);}
-    @RequestMapping(path = "delete/id",method = {RequestMethod.DELETE,RequestMethod.GET})
+    @RequestMapping(path = "delete/{id}",method = {RequestMethod.DELETE,RequestMethod.GET})
     public void Delete(@PathVariable("id") Integer id){daladalarouteService.Delete(id);}
     @RequestMapping(path="put",method = RequestMethod.PUT)
     public void update(@RequestBody Daladalaroute daladalaroute){daladalarouteService.updateDaladalaroute(daladalaroute);}
