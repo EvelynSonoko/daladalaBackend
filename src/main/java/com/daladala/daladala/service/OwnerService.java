@@ -1,11 +1,13 @@
 package com.daladala.daladala.service;
 
+import com.daladala.daladala.Encrypt;
 import com.daladala.daladala.repository.OwnerRepository;
 import com.daladala.daladala.tables.Owner;
 import com.daladala.daladala.tables.User;
 import lombok.Data;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Service
@@ -19,6 +21,7 @@ public class OwnerService {
         user.setPassword(owner.getEmail());
         user.setUsertype("Customer");
         userService.addUser(user);
+
        return ownerRepository.save(owner);
     }
     public List<Owner> getAll(){
